@@ -30,7 +30,7 @@ p {
 .countdown-timer {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between units */
+    gap: 20px;
     margin-bottom: 20px;
 }
 
@@ -40,13 +40,13 @@ p {
     align-items: center;
     font-size: 2em;
     font-weight: bold;
-    color: #007bff; /* Example color */
+    color: #028A0F;
 }
 
 .time-unit .label {
     font-size: 0.5em;
     font-weight: normal;
-    color: #666;
+    color: #7ea0de;
     margin-top: 5px;
 }
 
