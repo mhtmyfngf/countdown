@@ -1,6 +1,6 @@
 // Format: "Month Day, Year Hour:Minute:Second"
 // Example: "July 21, 2024 15:00:00" (for 3 PM on July 21, 2024)
-const targetDate = new Date("May 3, 2025 10:00:00").getTime();
+const targetDate = new Date("May 3, 2025 15:00:00").getTime();
 
 const countdownFunction = setInterval(function() {
 
