@@ -1,6 +1,6 @@
 // Format: "Month Day, Year Hour:Minute:Second"
 // Example: "July 21, 2024 15:00:00" (for 3 PM on July 21, 2024)
-const targetDate = new Date("May 3, 2025 15:00:00").getTime();
+const targetDate = new Date("May 23, 2025 8:00:00").getTime();
 
 const countdownFunction = setInterval(function() {
 
@@ -29,7 +29,7 @@ const countdownFunction = setInterval(function() {
         document.getElementById("hours").innerHTML = "0";
         document.getElementById("minutes").innerHTML = "0";
         document.getElementById("seconds").innerHTML = "0";
-        document.getElementById("event-message").innerHTML = "IM HEREEEEEEEE"; // Or any message
+        document.getElementById("event-message").innerHTML = "IM HEREEE AGAINNNN"; // Or any message
         document.querySelector(".countdown-timer").style.display = "none"; // Hide the timer
     }
 }, 1000); // Update every 1 second
