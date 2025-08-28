@@ -3,34 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hey Cameronnnnn</title>
+    <title>Cameron's Countdown</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">  <!--Boyah im fontmaxxing-->
 </head>
 <body>
 
-    <div class="countdown-container">
+    <!--the og jit-->
+    <div class="countdown-container" id="countdown1">
         <h1>I miss you cameron butttt</h1>
-	<p>There's only like</p>
-        <div class="countdown-timer">
+        <p>There's only like</p>
+        <div class="countdown-timer" id="countdown-timer1">
             <div class="time-unit">
-                <span id="days"></span>
+                <span id="days1"></span>
                 <div class="label">Days</div>
             </div>
             <div class="time-unit">
-                <span id="hours"></span>
+                <span id="hours1"></span>
                 <div class="label">Hours</div>
             </div>
             <div class="time-unit">
-                <span id="minutes"></span>
+                <span id="minutes1"></span>
                 <div class="label">Minutes</div>
             </div>
             <div class="time-unit">
-                <span id="seconds"></span>
+                <span id="seconds1"></span>
                 <div class="label">Seconds</div>
             </div>
         </div>
-	<p>Untill I'm in your arms <br> (Or at least should be[50/50])</p>
-        <p id="event-message"></p>
+        <p>Untill I'm in your arms <br> (Or at least should be[50/50])</p>
+        <p id="event-message1"></p>
+    </div>
+
+    <!-- Second Countdown (now a Count-Up) -->
+    <div class="countdown-container" id="countdown2">
+        <h2 class="countdown-title">Since Project Start</h2> <!-- Updated title -->
+        <div class="countdown-timer" id="countdown-timer2">
+            <div class="time-unit">
+                <span id="days2"></span>
+                <div class="label">Days</div>
+            </div>
+            <div class="time-unit">
+                <span id="hours2"></span>
+                <div class="label">Hours</div>
+            </div>
+            <div class="time-unit">
+                <span id="minutes2"></span>
+                <div class="label">Minutes</div>
+            </div>
+            <div class="time-unit">
+                <span id="seconds2"></span>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+        <p id="event-message2"></p>
     </div>
 
     <script src="script.js"></script>
