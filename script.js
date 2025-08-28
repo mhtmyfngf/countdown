@@ -19,6 +19,7 @@ const countdowns = [
         eventMessage: "uhhh",
         type: "countup",
         elements: {
+            years: "years2",
             days: "days2",
             hours: "hours2",
             minutes: "minutes2",
@@ -37,15 +38,29 @@ function initializeCountdown(countdownConfig) {
         if (countdownConfig.type === "countdown") {
             distance = countdownConfig.targetDate - now;
         } else if (countdownConfig.type === "countup") {
-            distance = now - countdownConfig.targetDate;
+            distance = now - countdownConfig.targetDate; // Calculate time elapsed
         }
 
+        // Only display positive values for countdown, or continuously for count-up
         if (distance >= 0 || countdownConfig.type === "countup") {
+            let years = 0;
+            if (countdownConfig.type === "countup" && countdownConfig.elements.years) {
+                // Approximate years for count-up
+                // Using 365.25 days per year for better average accuracy
+                years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365.25));
+                distance -= years * (1000 * 60 * 60 * 24 * 365.25); // Subtract years from distance
+            }
+
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+            // Display years if element exists
+            if (countdownConfig.elements.years) {
+                document.getElementById(countdownConfig.elements.years).innerHTML = years;
+            }
+            // Display other results
             document.getElementById(countdownConfig.elements.days).innerHTML = days;
             document.getElementById(countdownConfig.elements.hours).innerHTML = hours;
             document.getElementById(countdownConfig.elements.minutes).innerHTML = minutes;
@@ -53,8 +68,12 @@ function initializeCountdown(countdownConfig) {
         }
 
 
+        // Logic for when the timer 'ends' (for countdown)
         if (countdownConfig.type === "countdown" && distance < 0) {
             clearInterval(countdownFunction);
+            if (countdownConfig.elements.years) {
+                document.getElementById(countdownConfig.elements.years).innerHTML = "0";
+            }
             document.getElementById(countdownConfig.elements.days).innerHTML = "0";
             document.getElementById(countdownConfig.elements.hours).innerHTML = "0";
             document.getElementById(countdownConfig.elements.minutes).innerHTML = "0";
@@ -65,9 +84,9 @@ function initializeCountdown(countdownConfig) {
     }, 1000);
 }
 
-// Initialize all countdowns
+//do the thing cuh
 countdowns.forEach(config => {
-    if (document.getElementById(config.id)) { //lock in
+     if (document.getElementById(config.id)) { //lock in
         initializeCountdown(config);
     }
 });
