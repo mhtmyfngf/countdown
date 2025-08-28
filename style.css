@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient to right, #ece9e6, #ffffff); /* ts js auramaxxing atp */
+    background: linear-gradient to right, #FED0C5, #9b47b5); /* ts js auramaxxing atp */
     margin: 0;
     color: #333;
     line-height: 1.6;
@@ -89,3 +89,4 @@ h1 {
     margin-bottom: 20px;
     text-transform: capitalize;
 }
+
