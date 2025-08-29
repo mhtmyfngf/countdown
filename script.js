@@ -15,7 +15,7 @@ const countdowns = [
     },
     {
         id: "countdown2",
-        targetDate: new Date("February 16, 2024 00:00:00").getTime(),
+        targetDate: new Date("February 16, 2025 00:00:00").getTime(),
         eventMessage: "uhhh",
         type: "countup",
         elements: {
@@ -90,3 +90,4 @@ countdowns.forEach(config => {
         initializeCountdown(config);
     }
 });
+
